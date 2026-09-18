@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TopSSH 服务条款 | Terms of Service</title>
+  <style>
+    :root {
+      --bg: #ffffff;
+      --card-bg: #f8fafc;
+      --text: #0f172a;
+      --text-muted: #64748b;
+      --primary: #2563eb;
+      --border: #e2e8f0;
+      --tag-bg: #eff6ff;
+      --tag-text: #1d4ed8;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #0b0f19;
+        --card-bg: #131b2e;
+        --text: #f8fafc;
+        --text-muted: #94a3b8;
+        --primary: #3b82f6;
+        --border: #1e293b;
+        --tag-bg: #1e293b;
+        --tag-text: #60a5fa;
+      }
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+      padding: 0 16px 60px;
+    }
+    .container {
+      max-width: 780px;
+      margin: 0 auto;
+    }
+    header {
+      padding: 40px 0 24px;
+      border-bottom: 1px solid var(--border);
+      margin-bottom: 32px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+    .header-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 700;
+      font-size: 1.25rem;
+      text-decoration: none;
+      color: var(--text);
+    }
+    .brand-badge {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 32px;
+      height: 32px;
+      background: var(--primary);
+      color: #fff;
+      border-radius: 8px;
+      font-size: 1.1rem;
+      font-family: ui-monospace, monospace;
+    }
+    .nav-links {
+      display: flex;
+      gap: 12px;
+      align-items: center;
+    }
+    .nav-links a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 0.9rem;
+      padding: 6px 12px;
+      border-radius: 6px;
+      transition: all 0.15s;
+    }
+    .nav-links a:hover, .nav-links a.active {
+      color: var(--primary);
+      background: var(--card-bg);
+    }
+    .lang-switcher {
+      display: flex;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      overflow: hidden;
+      font-size: 0.85rem;
+    }
+    .lang-btn {
+      padding: 6px 12px;
+      background: transparent;
+      border: none;
+      color: var(--text-muted);
+      cursor: pointer;
+      font-weight: 500;
+    }
+    .lang-btn.active {
+      background: var(--primary);
+      color: #ffffff;
+    }
+    h1 {
+      font-size: 2rem;
+      font-weight: 800;
+      letter-spacing: -0.025em;
+    }
+    .meta {
+      color: var(--text-muted);
+      font-size: 0.9rem;
+    }
+    h2 {
+      font-size: 1.35rem;
+      font-weight: 700;
+      margin: 32px 0 12px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--border);
+    }
+    p, ul {
+      margin-bottom: 16px;
+      color: var(--text);
+    }
+    ul {
+      padding-left: 20px;
+    }
+    li {
+      margin-bottom: 8px;
+    }
+    a {
+      color: var(--primary);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+    footer {
+      margin-top: 60px;
+      padding-top: 24px;
+      border-top: 1px solid var(--border);
+      color: var(--text-muted);
+      font-size: 0.85rem;
+      text-align: center;
+    }
+    .lang-section { display: none; }
+    .lang-section.active { display: block; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="header-top">
+        <a href="#" class="brand">
+          <span class="brand-badge">›_</span> TopSSH
+        </a>
+        <div class="nav-links">
+          <a href="privacy.html">隐私政策 / Privacy</a>
+          <a href="terms.html" class="active">服务条款 / Terms</a>
+          <div class="lang-switcher">
+            <button class="lang-btn active" id="btn-zh" onclick="setLang('zh')">中文</button>
+            <button class="lang-btn" id="btn-en" onclick="setLang('en')">English</button>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- 中文内容 -->
+    <div id="section-zh" class="lang-section active">
+      <h1>TopSSH 服务条款</h1>
+      <p class="meta">生效日期：2026 年 9 月 18 日 · 适用于 iOS 与 iPadOS</p>
+
+      <h2>1. 条款确认与适用范围</h2>
+      <p>感谢您使用 TopSSH（以下简称“本软件”或“本应用”）。下载、安装或使用 TopSSH，即表示您已阅读、理解并同意受本服务条款（Terms of Service）的约束。若您不同意本条款，请勿使用本软件。</p>
+
+      <h2>2. 软件性质与授权许可</h2>
+      <p>TopSSH 是一款跨平台 SSH 终端及服务器管理工具：</p>
+      <ul>
+        <li><strong>开源与使用授权</strong>：本软件遵循开源许可协议分发。您被授予个人或企业内部合法的非独占使用许可。</li>
+        <li><strong>工具性质</strong>：TopSSH 仅作为本地客户端工具运行，我们不控制、不中继、亦不拥有您连接的任何第三方远程服务器。</li>
+      </ul>
+
+      <h2>3. 合规使用与用户责任</h2>
+      <p>您在使用本软件连接和管理远程主机时，必须承诺遵守所有适用的法律法规：</p>
+      <ul>
+        <li><strong>合法授权</strong>：您保证仅对您合法拥有的服务器、或已获得明确书面授权的远程系统发起 SSH 连接与指令操作。</li>
+        <li><strong>禁止非法用途</strong>：严禁使用本软件从事未经授权的网络渗透探测、拒绝服务攻击（DDoS）、恶意软件传播或其他破坏计算机信息系统的违法行为。</li>
+        <li><strong>凭据安全保管</strong>：您对妥善保管自己的私钥文件、登录密码、加密口令及设备访问密码承担完全责任。因您个人泄露密码、设备丢失或未设锁屏密码造成的任何安全事件，由您自行承担。</li>
+      </ul>
+
+      <h2>4. 免责声明与保证限制</h2>
+      <p><strong>本软件按“现状”（AS-IS）和“可获得性”提供，不包含任何明示或暗示的保证：</strong></p>
+      <ul>
+        <li>开发者明确声明不提供关于适销性、特定用途适用性及无侵权的任何担保。</li>
+        <li>由于网络抖动、移动系统后台挂起、远程主机不可用或第三方自建云存储异常引起的命令执行中断、连接超时、会话断开或数据丢失，开发者不承担任何直接或间接的赔偿责任。</li>
+        <li>在任何情况下，开发者均不对任何间接损失、附带损失、利润损失、业务中断或数据恢复费用承担责任。</li>
+      </ul>
+
+      <h2>5. 第三方服务与开源组件</h2>
+      <p>本软件集成了部分经过严格审计的第三方开源技术（包括但不限于 Apple SwiftNIO SSH、Citadel、SwiftTerm 等）。这些组件分别遵循其独立的开源许可协议（如 MIT、Apache 2.0 等）。用户自行配置的 WebDAV 或 AWS S3 同步端点，适用相应云服务商的服务协议。</p>
+
+      <h2>6. 条款变更与终止</h2>
+      <p>我们保留随时修改或更新本条款的权利。修改后的条款将在发布后立即生效。继续使用本应用即表示您接受修订后的条款。</p>
+
+      <h2>7. 联系方式</h2>
+      <p>如对本条款有任何疑问，可通过以下方式联系开发者：</p>
+      <ul>
+        <li><strong>邮箱</strong>：<a href="mailto:wusky1988@gmail.com">wusky1988@gmail.com</a></li>
+        <li><strong>GitHub</strong>：<a href="https://github.com/cnliucheng/TopSSH_iOS" target="_blank" rel="noopener">https://github.com/cnliucheng/TopSSH_iOS</a></li>
+      </ul>
+    </div>
+
+    <!-- 英文内容 -->
+    <div id="section-en" class="lang-section">
+      <h1>TopSSH Terms of Service</h1>
+      <p class="meta">Effective Date: September 18, 2026 · Applicable to iOS & iPadOS</p>
+
+      <h2>1. Acceptance of Terms</h2>
+      <p>Thank you for using TopSSH ("the Software" or "the Application"). By downloading, installing, or using TopSSH, you agree to be bound by these Terms of Service. If you do not agree to these terms, please do not use the Software.</p>
+
+      <h2>2. Software License and Description</h2>
+      <p>TopSSH is a cross-platform SSH terminal and server management workbench:</p>
+      <ul>
+        <li><strong>Open Source License</strong>: The Software is distributed under open-source license terms. You are granted a non-exclusive license to use the application for personal or commercial purposes.</li>
+        <li><strong>Client Tool</strong>: TopSSH operates strictly as a local client. We do not own, intermediate, or control any remote servers you connect to.</li>
+      </ul>
+
+      <h2>3. Acceptable Use and User Responsibilities</h2>
+      <p>You agree to use TopSSH solely for lawful purposes in accordance with all applicable regulations:</p>
+      <ul>
+        <li><strong>Authorized Access</strong>: You represent and warrant that you only connect to and manage servers that you own or have explicit authorization to administer.</li>
+        <li><strong>Prohibited Activities</strong>: You may not use the Software for unauthorized network penetration, denial-of-service (DDoS) attacks, malware dissemination, or any unlawful interference with computer systems.</li>
+        <li><strong>Credential Safeguards</strong>: You are solely responsible for safeguarding your SSH private keys, passwords, passphrases, and device access passcodes.</li>
+      </ul>
+
+      <h2>4. Disclaimer of Warranty & Limitation of Liability</h2>
+      <p><strong>The Software is provided "AS IS" and "AS AVAILABLE", without warranty of any kind:</strong></p>
+      <ul>
+        <li>The developer disclaims all warranties, express or implied, including fitness for a particular purpose and non-infringement.</li>
+        <li>Under no circumstances shall the developer be liable for any direct, indirect, incidental, special, consequential, or punitive damages arising out of connection drops, mobile background suspension, remote server errors, or data loss.</li>
+      </ul>
+
+      <h2>5. Third-Party Components</h2>
+      <p>The Software includes verified open-source libraries (e.g., Apple SwiftNIO SSH, Citadel, SwiftTerm), governed by their respective licenses (MIT, Apache 2.0). Connecting to self-hosted WebDAV or S3 endpoints is governed by your agreement with those providers.</p>
+
+      <h2>6. Modifications and Contact</h2>
+      <p>We reserve the right to revise these terms at any time. For questions regarding these Terms of Service, please contact:</p>
+      <ul>
+        <li><strong>Email</strong>: <a href="mailto:wusky1988@gmail.com">wusky1988@gmail.com</a></li>
+        <li><strong>GitHub</strong>: <a href="https://github.com/cnliucheng/TopSSH_iOS" target="_blank" rel="noopener">https://github.com/cnliucheng/TopSSH_iOS</a></li>
+      </ul>
+    </div>
+
+    <footer>
+      <p>© 2026 TopSSH. All rights reserved. Made for engineers who take server management seriously.</p>
+    </footer>
+  </div>
+
+  <script>
+    function setLang(lang) {
+      document.getElementById('section-zh').classList.toggle('active', lang === 'zh');
+      document.getElementById('section-en').classList.toggle('active', lang === 'en');
+      document.getElementById('btn-zh').classList.toggle('active', lang === 'zh');
+      document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+    }
+  </script>
+</body>
+</html>

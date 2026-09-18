@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TopSSH 隐私政策 | Privacy Policy</title>
+  <style>
+    :root {
+      --bg: #ffffff;
+      --card-bg: #f8fafc;
+      --text: #0f172a;
+      --text-muted: #64748b;
+      --primary: #2563eb;
+      --border: #e2e8f0;
+      --tag-bg: #eff6ff;
+      --tag-text: #1d4ed8;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #0b0f19;
+        --card-bg: #131b2e;
+        --text: #f8fafc;
+        --text-muted: #94a3b8;
+        --primary: #3b82f6;
+        --border: #1e293b;
+        --tag-bg: #1e293b;
+        --tag-text: #60a5fa;
+      }
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+      padding: 0 16px 60px;
+    }
+    .container {
+      max-width: 780px;
+      margin: 0 auto;
+    }
+    header {
+      padding: 40px 0 24px;
+      border-bottom: 1px solid var(--border);
+      margin-bottom: 32px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+    .header-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 700;
+      font-size: 1.25rem;
+      text-decoration: none;
+      color: var(--text);
+    }
+    .brand-badge {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 32px;
+      height: 32px;
+      background: var(--primary);
+      color: #fff;
+      border-radius: 8px;
+      font-size: 1.1rem;
+      font-family: ui-monospace, monospace;
+    }
+    .nav-links {
+      display: flex;
+      gap: 12px;
+      align-items: center;
+    }
+    .nav-links a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 0.9rem;
+      padding: 6px 12px;
+      border-radius: 6px;
+      transition: all 0.15s;
+    }
+    .nav-links a:hover, .nav-links a.active {
+      color: var(--primary);
+      background: var(--card-bg);
+    }
+    .lang-switcher {
+      display: flex;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      overflow: hidden;
+      font-size: 0.85rem;
+    }
+    .lang-btn {
+      padding: 6px 12px;
+      background: transparent;
+      border: none;
+      color: var(--text-muted);
+      cursor: pointer;
+      font-weight: 500;
+    }
+    .lang-btn.active {
+      background: var(--primary);
+      color: #ffffff;
+    }
+    h1 {
+      font-size: 2rem;
+      font-weight: 800;
+      letter-spacing: -0.025em;
+    }
+    .meta {
+      color: var(--text-muted);
+      font-size: 0.9rem;
+    }
+    .summary-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 20px;
+      margin-bottom: 32px;
+    }
+    .summary-card h3 {
+      font-size: 1.05rem;
+      margin-bottom: 10px;
+      color: var(--primary);
+    }
+    .summary-card ul {
+      list-style-position: inside;
+      color: var(--text-muted);
+      font-size: 0.95rem;
+    }
+    .summary-card li { margin-bottom: 6px; }
+    h2 {
+      font-size: 1.35rem;
+      font-weight: 700;
+      margin: 32px 0 12px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--border);
+    }
+    p, ul {
+      margin-bottom: 16px;
+      color: var(--text);
+    }
+    ul {
+      padding-left: 20px;
+    }
+    li {
+      margin-bottom: 8px;
+    }
+    code {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+      font-size: 0.9em;
+      background: var(--card-bg);
+      padding: 2px 6px;
+      border-radius: 4px;
+      border: 1px solid var(--border);
+    }
+    a {
+      color: var(--primary);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+    footer {
+      margin-top: 60px;
+      padding-top: 24px;
+      border-top: 1px solid var(--border);
+      color: var(--text-muted);
+      font-size: 0.85rem;
+      text-align: center;
+    }
+    .lang-section { display: none; }
+    .lang-section.active { display: block; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="header-top">
+        <a href="#" class="brand">
+          <span class="brand-badge">›_</span> TopSSH
+        </a>
+        <div class="nav-links">
+          <a href="privacy.html" class="active">隐私政策 / Privacy</a>
+          <a href="terms.html">服务条款 / Terms</a>
+          <div class="lang-switcher">
+            <button class="lang-btn active" id="btn-zh" onclick="setLang('zh')">中文</button>
+            <button class="lang-btn" id="btn-en" onclick="setLang('en')">English</button>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- 中文内容 -->
+    <div id="section-zh" class="lang-section active">
+      <h1>TopSSH 隐私政策</h1>
+      <p class="meta">生效日期：2026 年 9 月 18 日 · 适用于 iOS 与 iPadOS</p>
+
+      <div class="summary-card">
+        <h3>核心隐私承诺</h3>
+        <ul>
+          <li><strong>零个人数据收集</strong>：无需注册中心化账号，无第三方统计分析或广告 SDK。</li>
+          <li><strong>本地钥匙串保护</strong>：密码与私钥仅存储在系统安全钥匙串（Keychain）中。</li>
+          <li><strong>端到端自建同步</strong>：云同步仅连接用户自有的 WebDAV / S3 服务，数据本地强加密后方离开设备。</li>
+          <li><strong>无击键监控</strong>：终端所有交互直接走 SSH 安全加密信道，本地不留存亦不上报任何击键流。</li>
+        </ul>
+      </div>
+
+      <h2>1. 我们收集的信息</h2>
+      <p>TopSSH 是一款<strong>本地优先（Local-First）</strong>的服务器管理与终端工具。在设计上，我们坚持最小化数据接触原则：</p>
+      <ul>
+        <li><strong>零个人身份信息</strong>：我们不收集、不存储、亦不出售您的个人姓名、手机号码、电子邮件、设备唯一标识符（IDFA / IDFV）或 IP 地址。</li>
+        <li><strong>零第三方分析与追踪</strong>：应用内未集成任何第三方统计分析、行为追踪或广告 SDK（如 Google Analytics、Firebase、Adjust、Facebook SDK 等）。</li>
+        <li><strong>零网络遥测</strong>：App 不存在任何“向开发者服务器发送使用情况数据”的后台埋点机制。</li>
+      </ul>
+
+      <h2>2. 凭据与安全存储机制</h2>
+      <p>保护您的服务器连接凭据是 TopSSH 的第一要务：</p>
+      <ul>
+        <li><strong>系统钥匙串隔离</strong>：所有保存的 SSH 登录密码、私钥、私钥密码短语（Passphrase），均直接写入操作系统级安全钥匙串（iOS Keychain）。</li>
+        <li><strong>访问策略</strong>：凭据均设置了 <code>kSecAttrAccessibleWhenUnlockedThisDeviceOnly</code> 安全属性，这意味着凭据在设备锁屏时完全无法被解密访问，且凭据绝不会跟随 iCloud 备份漫游至非受控设备。</li>
+        <li><strong>生物识别前置确认</strong>：在连接已保存的服务器前，App 会调用系统级 Face ID / Touch ID 或设备锁屏密码进行身份核验，杜绝未授权持有设备者直接连接服务器。</li>
+      </ul>
+
+      <h2>3. 终端会话与网络通信</h2>
+      <ul>
+        <li><strong>端到端安全 SSH</strong>：App 内终端基于标准 OpenSSH / SwiftNIO SSH 协议与您指定的目标服务器建立点对点加密通道。数据交互仅发生在您的设备与目标服务器之间。</li>
+        <li><strong>无键盘记录与中转</strong>：终端界面的每一次敲击直接转化为 PTY 原始字节并由 SSH 加密传输，TopSSH 不会以任何形式记录、镜像或拦截您的终端命令与输出内容。</li>
+      </ul>
+
+      <h2>4. 云同步服务说明</h2>
+      <p>TopSSH 提供可选的多设备数据备份与同步功能：</p>
+      <ul>
+        <li><strong>去中心化与自建存储</strong>：TopSSH 不提供中心化存储服务器。同步仅支持用户自行拥有的 WebDAV 或 AWS S3 兼容对象存储。</li>
+        <li><strong>端到端高强度加密</strong>：同步快照在离开您的设备前，已在本地使用派生密钥（PBKDF2 结合 AES-GCM-256）完成加密。云存储服务商仅能保存密文快照，无法窥探或解密您的主机列表及私钥信息。</li>
+        <li><strong>不安全明文网络防护</strong>：默认禁止明文 HTTP 同步连接，仅在用户显式理解并勾选确认风险后方可放行。</li>
+      </ul>
+
+      <h2>5. 设备系统权限使用说明</h2>
+      <ul>
+        <li><strong>本地网络权限（Local Network）</strong>：用于检测局域网内的 SSH 服务器是否在线（轻量级 TCP 握手探测，不发送任何登录数据或业务流量）。</li>
+        <li><strong>Face ID / 生物识别权限</strong>：用于在发起 SSH 连接前核实设备持有者身份。生物特征数据完全在 Apple 硬件级安全飞地（Secure Enclave）中处理，App 无法获知或保存原始生物识别数据。</li>
+      </ul>
+
+      <h2>6. 儿童隐私</h2>
+      <p>本应用面向广大运维工程师、开发者与系统管理专业人员，不针对亦不会有意收集 13 周岁（或所在司法管辖区规定的适龄儿童）以下未成年人的任何个人信息。</p>
+
+      <h2>7. 政策变更与联系支持</h2>
+      <p>若本隐私政策发生修改，最新版本将及时在本页面及 GitHub 开源仓库发布。如您对本政策有任何疑问、建议或隐私顾虑，欢迎联系开发者：</p>
+      <ul>
+        <li><strong>开发者邮箱</strong>：<a href="mailto:wusky1988@gmail.com">wusky1988@gmail.com</a></li>
+        <li><strong>开源代码仓库</strong>：<a href="https://github.com/cnliucheng/TopSSH_iOS" target="_blank" rel="noopener">https://github.com/cnliucheng/TopSSH_iOS</a></li>
+      </ul>
+    </div>
+
+    <!-- 英文内容 -->
+    <div id="section-en" class="lang-section">
+      <h1>TopSSH Privacy Policy</h1>
+      <p class="meta">Effective Date: September 18, 2026 · Applicable to iOS & iPadOS</p>
+
+      <div class="summary-card">
+        <h3>Core Privacy Commitments</h3>
+        <ul>
+          <li><strong>Zero Personal Data Collection</strong>: No account registration, no third-party tracking, analytics, or ad SDKs.</li>
+          <li><strong>Keychain Security</strong>: Passwords and private keys are secured exclusively in iOS Keychain.</li>
+          <li><strong>End-to-End Encrypted Cloud Sync</strong>: Sync runs only against your self-hosted WebDAV / S3 storage; data is encrypted before leaving your device.</li>
+          <li><strong>Zero Keystroke Logging</strong>: Direct encrypted SSH transport with zero telemetry or keystroke logging.</li>
+        </ul>
+      </div>
+
+      <h2>1. Information We Collect</h2>
+      <p>TopSSH is a <strong>local-first</strong> SSH client and server management workbench. We adhere to the strict principle of zero data collection:</p>
+      <ul>
+        <li><strong>No Personal Identifiable Information (PII)</strong>: We do not collect, process, or sell your name, phone number, email address, IP address, or device identifiers (IDFA/IDFV).</li>
+        <li><strong>No Third-Party Analytics or Trackers</strong>: TopSSH contains no third-party analytics, tracking libraries, or advertising SDKs (e.g., Google Firebase, Adjust, Facebook SDK).</li>
+        <li><strong>Zero Telemetry</strong>: The application does not communicate with any developer-hosted telemetry servers.</li>
+      </ul>
+
+      <h2>2. Credentials and Secure Storage</h2>
+      <p>Protecting your connection credentials is our highest priority:</p>
+      <ul>
+        <li><strong>System Keychain Isolation</strong>: Saved server passwords, SSH private keys, and passphrases are written directly to the secure iOS Keychain.</li>
+        <li><strong>Access Control</strong>: All items are tagged with <code>kSecAttrAccessibleWhenUnlockedThisDeviceOnly</code>. Credentials cannot be accessed while your device is locked and will never be backed up to unmanaged iCloud targets.</li>
+        <li><strong>Biometric Protection</strong>: Before connecting to a saved server, TopSSH requires Face ID, Touch ID, or your device passcode.</li>
+      </ul>
+
+      <h2>3. Terminal Sessions and Network Communications</h2>
+      <ul>
+        <li><strong>Direct Encrypted SSH</strong>: Terminal connections communicate directly with the target server via OpenSSH / SwiftNIO SSH protocols without intermediate proxying.</li>
+        <li><strong>No Keystroke Logging</strong>: Keystrokes are passed straight to the PTY byte stream. TopSSH does not log, mirror, or capture any command input or terminal output.</li>
+      </ul>
+
+      <h2>4. Cloud Synchronization</h2>
+      <ul>
+        <li><strong>User-Controlled Endpoints</strong>: TopSSH does not host a centralized synchronization server. Cloud sync works exclusively with your self-hosted WebDAV or S3-compatible endpoints.</li>
+        <li><strong>Client-Side Encryption</strong>: All sync snapshots are encrypted locally using PBKDF2 and AES-GCM-256 before leaving your device. Storage providers see only ciphertext.</li>
+        <li><strong>Cleartext Network Protection</strong>: Insecure cleartext HTTP connections are rejected by default unless you explicitly acknowledge the risk.</li>
+      </ul>
+
+      <h2>5. Device Permissions</h2>
+      <ul>
+        <li><strong>Local Network</strong>: Used exclusively to probe server reachability via lightweight TCP connection checks without sending any login data.</li>
+        <li><strong>Face ID / Biometrics</strong>: Used to verify device owner identity before SSH connection establishment. Biometric data is managed entirely within the Secure Enclave.</li>
+      </ul>
+
+      <h2>6. Children's Privacy</h2>
+      <p>TopSSH is designed for software developers and system administrators. We do not knowingly collect any personal data from children under the age of 13.</p>
+
+      <h2>7. Contact and Inquiries</h2>
+      <p>If you have any questions or feedback regarding this Privacy Policy, please contact:</p>
+      <ul>
+        <li><strong>Email</strong>: <a href="mailto:wusky1988@gmail.com">wusky1988@gmail.com</a></li>
+        <li><strong>GitHub Repository</strong>: <a href="https://github.com/cnliucheng/TopSSH_iOS" target="_blank" rel="noopener">https://github.com/cnliucheng/TopSSH_iOS</a></li>
+      </ul>
+    </div>
+
+    <footer>
+      <p>© 2026 TopSSH. All rights reserved. Made for engineers who take server management seriously.</p>
+    </footer>
+  </div>
+
+  <script>
+    function setLang(lang) {
+      document.getElementById('section-zh').classList.toggle('active', lang === 'zh');
+      document.getElementById('section-en').classList.toggle('active', lang === 'en');
+      document.getElementById('btn-zh').classList.toggle('active', lang === 'zh');
+      document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+    }
+  </script>
+</body>
+</html>
